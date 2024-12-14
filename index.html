@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Medical Questionnaire</title>
+</head>
+<body>
+    <header>
+        <h1>Medical Questionnaire</h1>
+    </header>
+    <div class="container">
+        <section class="user-input">
+            <h2>Enter Your Information</h2>
+            <div class="input-field">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="input-field">
+                <label for="age">Age:</label>
+                <input type="number" id="age" placeholder="Your Age" required>
+            </div>
+            <div class="input-field">
+                <label for="gender">Gender:</label>
+                <select id="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            <div class="input-field">
+                <label for="height">Height (cm):</label>
+                <input type="number" id="height" placeholder="Your Height" required>
+            </div>
+            <div class="input-field">
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" placeholder="Your Weight" required>
+            </div>
+            <div class="input-field">
+                <label for="blood-group">Blood Group:</label>
+                <select id="blood-group" required>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                </select>
+            </div>
+            <div class="input-field">
+                <label for="medical-conditions">Medical Conditions (select multiple):</label>
+                <select id="medical-conditions" multiple>
+                    <option value="diabetes">Diabetes</option>
+                    <option value="hypertension">Hypertension</option>
+                    <option value="asthma">Asthma</option>
+                    <!-- Add more medical condition options here -->
+                </select>
+            </div>
+            <div class="input-field">
+                <label for="allergies">Allergies (select multiple):</label>
+                <select id="allergies" multiple>
+                    <option value="pollen">Pollen</option>
+                    <option value="dust">Dust</option>
+                    <option value="pet-dander">Pet Dander</option>
+                    <!-- Add more allergy options here -->
+                </select>
+            </div>
+        </section>
+        <section class="symptoms">
+            <h2>Select Symptoms</h2>
+            <div class="symptom-checkboxes">
+                <label>
+                    <input type="checkbox" name="symptoms" value="Cough"> Cough
+                </label>
+                <label>
+                    <input type="checkbox" name="symptoms" value="Fever"> Fever
+                </label>
+                <!-- Add more symptom options here -->
+                <label>
+                    <input type="checkbox" name="symptoms" value="Chest Pain"> Chest Pain
+                </label>
+                <label>
+                    <input type="checkbox" name="symptoms" value="Stomach Pain"> Stomach Pain
+                </label>
+                <label>
+                    <input type="checkbox" name="symptoms" value="Shortness of Breath"> Shortness of Breath
+                </label>
+            </div>
+        </section>
+        <div class="btn-container">
+            <button id="start-btn">Start Questionnaire</button>
+        </div>
+    </div>
+    <div id="results" class="results"></div>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
